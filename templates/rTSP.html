@@ -1,0 +1,14 @@
+<ion-view style="" title="RTSP">
+    <ion-content class="has-header" padding="'true'">
+        <form style="" class="list">
+            <div style="">
+                <p>rtsp://ip:port/etc</p>
+            </div>
+            <label style="" class="item item-input">
+                <input placeholder="rtsp address" type="text" ng-model="page.rtsp_address">
+            </label>
+        </form>
+        <button style="" class="button button-stable button-block " ng-click="playPlugin()">PLUGIN</button>
+        <button style="" class="button button-stable button-block " on-tap="playNative()">NATIVE</button>
+    </ion-content>
+</ion-view>
