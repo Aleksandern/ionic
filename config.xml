@@ -42,7 +42,6 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <plugin name="com.mcsqd.cordova.plugins.streamingmedia" spec="0.1.4" source="pgb" />
-    <gap:plugin name="com.moust.cordova.videoplayer" version="1.0.1" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
