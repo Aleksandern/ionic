@@ -4,10 +4,19 @@
             <p>http://address.3u8</p>
         </div>
         <form style="" class="list">
-            <label style="" name="m3u8_address" class="item item-input">
-                <input placeholder="m3u8 address" type="text">
+            <label style="" class="item item-input">
+                <input placeholder="m3u8 address" type="text" ng-model="page.m3u8_address">
             </label>
         </form>
-        <button style="" class="button button-stable button-block " on-tap="hz()">PLAY</button>
+        <div style="" class="button-bar">
+            <button style="" class="button button-stable button-block " on-tap="play()">PLAY</button>
+            <button style="" class="button button-stable button-block " on-tap="stop()">STOP</button>
+        </div>        
+        <div style="">
+            <p>double-tap to open in "Full Screen" mode</p>
+        </div>
+        <div>
+            <video ng-src="{{  page.m3u8_address  || '//:0' }}" height="225" width="312" on-double-tap="fullScreen()" ng-model="page.player" id="b-video"></video>
+        </div>
     </ion-content>
 </ion-view>
