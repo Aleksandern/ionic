@@ -55,23 +55,28 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon gap:platform="android" src="img/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
+    <icon gap:platform="android" src="img/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
+    <icon gap:platform="android" src="img/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
+    <icon gap:platform="android" src="img/android/icon/drawable-hdpi-icon.png" density="xhdpi"/>
+    <icon gap:platform="ios" height="57" src="img/ios/icon/icon.png" width="57" />
+    <icon gap:platform="ios" height="80" src="img/ios/icon/icon-40@2x.png" width="80" />
+    <icon gap:platform="ios" height="50" src="img/ios/icon/icon-50.png" width="50" />
+    <icon gap:platform="ios" height="60" src="img/ios/icon/icon-60.png" width="60" />
+    <icon gap:platform="ios" height="72" src="img/ios/icon/icon-72.png" width="72" />
+    <icon gap:platform="ios" height="76" src="img/ios/icon/icon-76.png" width="76" />
+    <icon gap:platform="ios" height="29" src="img/ios/icon/icon-small.png" width="29" />
+    <icon gap:platform="ios" height="58" src="img/ios/icon/icon-small@2x.png" width="58" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="img/android/icon/drawable-ldpi-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="img/android/icon/drawable-mdpi-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="img/android/icon/drawable-hdpi-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="img/android/icon/drawable-hdpi-icon.png" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon src="img/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
-        <icon src="img/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
-        <icon src="img/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <icon height="57" src="img/ios/icon/icon.png" width="57" />
-        <icon height="80" src="img/ios/icon/icon-40@2x.png" width="80" />
-        <icon height="50" src="img/ios/icon/icon-50.png" width="50" />
-        <icon height="60" src="img/ios/icon/icon-60.png" width="60" />
-        <icon height="72" src="img/ios/icon/icon-72.png" width="72" />
-        <icon height="76" src="img/ios/icon/icon-76.png" width="76" />
-        <icon height="29" src="img/ios/icon/icon-small.png" width="29" />
-        <icon height="58" src="img/ios/icon/icon-small@2x.png" width="58" />
     </platform>
     <access origin="*://*"/>
 </widget>

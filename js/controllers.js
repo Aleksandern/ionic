@@ -19,14 +19,25 @@ angular.module('app.controllers', [])
     $scope.page.m3u8_address = 'http://kameravseti.ru:8080/u3143524645718/index.m3u8';
     //$scope.page.m3u8_address = 'poe_supply.mp4';
     $scope.fullsceen = 0;
+    $scope.page.v_loading = 0;
+
+    var video = angular.element(document.getElementById('b-video'));
+    video[0].addEventListener('play', function() {
+        $scope.page.v_loading = 0;
+    });        
 
     $scope.play = function() {
-        var video = angular.element(document.getElementById('b-video'));
+        $scope.page.v_loading = 1;
+        video[0].src = $scope.page.m3u8_address;
+        video[0].load();
         video[0].play();
+
+
+
+
     }
 
     $scope.stop = function() {
-        var video = angular.element(document.getElementById('b-video'));
         video[0].pause();
     }
 

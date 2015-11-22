@@ -16,7 +16,8 @@
             <p>double-tap to open in "Full Screen" mode</p>
         </div>
         <div>
-            <video ng-src="{{  page.m3u8_address  || '//:0' }}" height="225" width="312" on-double-tap="fullScreen()" ng-model="page.player" id="b-video"></video>
+            <div ng-show="page.v_loading">loading...</div>
+            <video src="" height="225" width="312" on-double-tap="fullScreen()" ng-model="page.player" id="b-video"></video>
         </div>
     </ion-content>
 </ion-view>
