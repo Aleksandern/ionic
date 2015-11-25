@@ -78,3 +78,67 @@ angular.module('app.controllers', [])
     }
 })
     
+   
+.controller('mp4Ctrl', function($scope) {
+    $scope.page = {};
+    $scope.page.m3u8_address = 'http://html5player.ru/html5.mp4';
+    //$scope.page.m3u8_address = 'poe_supply.mp4';
+    $scope.fullsceen = 0;
+    $scope.page.v_loading = 0;
+
+    var video = angular.element(document.getElementById('b-video'));
+    video[0].addEventListener('play', function() {
+        $scope.page.v_loading = 0;
+    });        
+
+    $scope.play = function() {
+        $scope.page.v_loading = 1;
+        video[0].src = $scope.page.m3u8_address;
+        video[0].load();
+        video[0].play();
+
+
+
+
+    }
+
+    $scope.stop = function() {
+        video[0].pause();
+    }
+
+    $scope.fullScreen = function() {
+        var video = angular.element(document.getElementById('b-video'));
+        video = video[0];
+
+        if (!$scope.fullsceen) {
+            $scope.fullsceen = 1;
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else {
+                video.webkitEnterFullScreen();
+            }
+        } else {
+            $scope.fullsceen = 0;
+
+            if (video.exitFullScreen) video.exitFullScreen();
+            else if (video.webkitExitFullScreen) {
+                video.webkitExitFullScreen();
+                //video.webkitCancelFullScreen();
+            }
+            else if (video.mozExitFullScreen) video.mozExitFullScreen();
+            else if (video.oExitFullScreen) video.oExitFullScreen();
+            else if (video.msExitFullScreen)video.msExitFullScreen();
+            else { 
+                video.exitFullScreen();
+                //alert('err');
+            }
+
+        }
+    }
+})

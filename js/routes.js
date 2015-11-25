@@ -33,6 +33,17 @@ angular.module('app.routes', [])
         }
       }
     })
+
+        
+    .state('tabsController.mp4', {
+      url: '/page4',
+      views: {
+        'tab4': {
+          templateUrl: 'templates/mp4.html',
+          controller: 'mp4Ctrl'
+        }
+      }
+    })
         
       
     

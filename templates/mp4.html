@@ -1,0 +1,25 @@
+<ion-view style="" title="mp4">
+    <ion-content class="has-header" padding="'true'">
+        <div style="">
+            <p>http://html5player.ru/html5.mp4</p>
+            <p>http://lizard.bluecherry.net/~autkin/contig.mp4</p>
+        </div>
+        <form style="" class="list">
+            <label style="" class="item item-input">
+                <input placeholder="m3u8 address" type="text" ng-model="page.m3u8_address">
+            </label>
+        </form>
+        <div style="" class="button-bar">
+            <button style="" class="button button-stable button-block " on-tap="play()">PLAY</button>
+            <button style="" class="button button-stable button-block " on-tap="stop()">STOP</button>
+        </div>        
+        <div style="">
+            <p>double-tap to open in "Full Screen" mode</p>
+        </div>
+        <div>
+            <div ng-show="page.v_loading">loading...</div>
+            <video src="" height="225" width="312" on-double-tap="fullScreen()" ng-model="page.player" id="b-video" type="video/mp4"></video>
+        </div>
+    </ion-content>
+</ion-view>
+
